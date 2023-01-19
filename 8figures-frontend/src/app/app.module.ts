@@ -7,6 +7,10 @@ import { RegisterComponent } from './register/register.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { CreateContactComponent } from './create-contact/create-contact.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { CommonModule } from '@angular/common';
+import {HttpClientModule} from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,10 +19,17 @@ import { EditContactComponent } from './edit-contact/edit-contact.component';
     RegisterComponent,
     ContactsComponent,
     CreateContactComponent,
-    EditContactComponent
+    EditContactComponent,
+    NavMenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+
+    // FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
