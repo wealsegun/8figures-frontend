@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactService } from '../services/contact.service';
 
 @Component({
   selector: 'app-edit-contact',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: ContactService) {
 
-  ngOnInit(): void {
+  }
+  ngOnInit() {
+
+  }
+
+  updateContactDetails(id: any) {
+    console.log(id);
   }
 
 }

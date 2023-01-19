@@ -1,1 +1,62 @@
-<p>create-contact works!</p>
+
+<div class="container m-auto bg-white p-5 bod-3">
+  <div class="row">
+    <!-- CARD FORM -->
+    <div class="col-lg-8 col-md-12">
+      <form [formGroup]="createContactFormGroup" >
+        <div class="header flex-between flex-vertical-center">
+          <div class="flex-vertical-center">
+            <i class="ai-bitcoin-fill size-xl pr-sm f-main-color"></i>
+            <span class="title">
+              <strong>Create Contact </strong><span>Details</span>
+            </span>
+          </div>
+        </div>
+        <div class="card-data flex-fill flex-vertical">
+          <!-- Card Number -->
+          <div class="flex-between flex-vertical-center">
+            <div class="card-property-title">
+              <strong>Contact Name</strong>
+            </div>
+          </div>
+
+
+
+          <!-- Card Field -->
+          <div class="flex-between">
+            <div class="card-number flex-vertical-center flex-fill">
+              <div class="card-number-field flex-vertical-center flex-fill">
+
+                <input type="text" formControlName="phoneNumber" placeholder="Full Name" class="form-control" id="fullName" name="fullName" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="card-data flex-fill flex-vertical">
+            <!-- Card Number -->
+            <div class="flex-between flex-vertical-center">
+              <div class="card-property-title">
+                <strong>Phone Number</strong>
+              </div>
+            </div>
+
+            <!-- Card Field -->
+            <div class="flex-between">
+              <div class="card-number flex-vertical-center flex-fill">
+                <div class="card-number-field flex-vertical-center flex-fill">
+
+                  <input type="text" formControlName="phoneNumber" placeholder="Phone Number" class="form-control" id="phoneNumber" maxlength="19" name="cardNumber" required />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="action flex-center">
+          <button type="submit" class="b-main-color">
+            Create Contact
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
