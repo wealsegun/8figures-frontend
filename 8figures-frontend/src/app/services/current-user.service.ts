@@ -7,7 +7,7 @@ import { UserProfile } from '../models/user-profile.model';
 })
 export class CurrentUserService {
 
-  constructor(private httpClient: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+  constructor(private httpClient: HttpClient) {
 
   }
 

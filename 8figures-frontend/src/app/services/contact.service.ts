@@ -10,8 +10,8 @@ import { ContactModel } from '../models/contact.model';
 export class ContactService {
 
   base!: string;
-  constructor(private httpClient: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    this.base = baseUrl;
+  constructor(private httpClient: HttpClient) {
+    // this.base = baseUrl;
   }
 
   getAllContact(): Observable<any> {
