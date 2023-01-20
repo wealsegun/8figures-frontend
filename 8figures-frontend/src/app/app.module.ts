@@ -1,3 +1,6 @@
+import { AccountService } from './services/account.service';
+import { CurrentUserService } from './services/current-user.service';
+import { ContactService } from './services/contact.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,7 +14,8 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { CommonModule } from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -24,16 +28,18 @@ import { RouterModule } from '@angular/router';
     NavMenuComponent
   ],
   imports: [
+
     BrowserModule,
     HttpClientModule,
     CommonModule,
     FormsModule,
     RouterModule,
     ReactiveFormsModule,
-
+    AppRoutingModule
+    // RouterTestingModule
     // FormsModule,
   ],
-  providers: [],
+  providers: [ ContactService, CurrentUserService, AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

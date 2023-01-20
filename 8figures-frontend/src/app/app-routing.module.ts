@@ -1,4 +1,5 @@
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { ContactsComponent } from './contacts/contacts.component';
 import { CreateContactComponent } from './create-contact/create-contact.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
@@ -15,4 +16,12 @@ const routes: Routes = [
   { path: 'edit-contact/:id', component: EditContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent }
-]
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+  declarations: [],
+})
+export class AppRoutingModule {}
+
